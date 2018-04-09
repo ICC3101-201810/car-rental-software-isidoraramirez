@@ -45,12 +45,18 @@
     <Compile Include="Accesorio.cs" />
     <Compile Include="Arriendo.cs" />
     <Compile Include="Cliente.cs" />
-    <Compile Include="Otro_cliente.cs" />
-    <Compile Include="Persona.cs" />
+    <Compile Include="Clientes\Otro_cliente.cs" />
+    <Compile Include="Clientes\Persona.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sucursal.cs" />
     <Compile Include="Vehiculo.cs" />
+    <Compile Include="Vehiculos\Acuatico.cs" />
+    <Compile Include="Vehiculos\Auto.cs" />
+    <Compile Include="Vehiculos\Bus.cs" />
+    <Compile Include="Vehiculos\Camion.cs" />
+    <Compile Include="Vehiculos\Moto.cs" />
+    <Compile Include="Vehiculos\M_pesada.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

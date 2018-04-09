@@ -6,29 +6,32 @@ using System.Threading.Tasks;
 
 namespace Lab03
 {
-    class Arriendo
+    public class Arriendo
     {
         Cliente cliente;
-        Accesorio accesorio;
-        DateTime Date;
+        DateTime Datei;
+        DateTime Datef;
         Vehiculo vehiculo;
+        List<Accesorio> accesorio;
+        public int costo;
         Sucursal sucursal;
-
-        Arriendo(Cliente cliente, DateTime Date, Vehiculo vehiculo, Sucursal sucursal)
+        public Arriendo(Cliente cliente, DateTime Datei,DateTime Datef, Vehiculo vehiculo, Sucursal sucursal)
         {
             this.cliente = cliente;
-            this.Date = Date;
+            this.Datei = Datei;
+            this.Datef = Datef;
             this.vehiculo = vehiculo;
             this.sucursal = sucursal;
-            
+            accesorio = new List<Accesorio>();
         }
-        /*
-        public String arrendar(Arriendo arriendo, Accesorio accesorio)
+        public void Arrendar(Cliente cliente, DateTime Datei, DateTime Datef, Vehiculo vehiculo, Sucursal sucursal, Accesorio accesorio_extra)
         {
-            if ()
-            {
-                return "Se arrendo con accesorio";
-            }
-        }*/
+            Arriendo Arrendado = new Arriendo(cliente, Datei, Datef, vehiculo, sucursal);
+            accesorio.Add(accesorio_extra);
+        }
+        public void Arrendar(Cliente cliente, DateTime Datei, DateTime Datef, Vehiculo vehiculo, Sucursal sucursal)
+        {
+            Arriendo Arrendado = new Arriendo(cliente, Datei, Datef, vehiculo, sucursal);
+        }
     }
 }

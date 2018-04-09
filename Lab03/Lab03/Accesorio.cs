@@ -8,14 +8,12 @@ namespace Lab03
 {
     public class Accesorio
     {
-        string nombre;
-        int precio;
-        bool usa;
-        Accesorio(string nombre, int precio, bool usa)
+        public string nombre;
+        public int precio;
+        public Accesorio(string nombre, int precio)
         {
             this.nombre = nombre;
             this.precio = precio;
-            this.usa = usa;
         }
     }
 }

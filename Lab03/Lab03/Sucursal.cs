@@ -10,6 +10,7 @@ namespace Lab03
     {
         public string location, nombre;
         List<Vehiculo> vehiculos;
+        List<Accesorio> accesorio;
         public Sucursal(string location,string nombre, List<Vehiculo> vehiculos)
         {
             this.location = location;
@@ -17,6 +18,5 @@ namespace Lab03
             this.vehiculos = vehiculos;
             
         }
-
     }
 }

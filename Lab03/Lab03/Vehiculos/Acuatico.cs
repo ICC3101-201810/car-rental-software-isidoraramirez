@@ -4,16 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lab03
+namespace Lab03.Vehiculos
 {
-    public class Vehiculo
+    class  Acuatico : Vehiculo
     {
-        public string patente;
-        public string marca;
-        public string modelo;
-        public string licencia;
-        public int precio;
-        public Vehiculo(string patente, string marca, string modelo, string licencia, int precio)
+        public Acuatico(string marca, string patente, string modelo, string licencia, int precio ) 
+            : base(marca, patente, modelo, licencia, precio)
         {
             this.patente = patente;
             this.marca = marca;
@@ -21,5 +17,6 @@ namespace Lab03
             this.licencia = licencia;
             this.precio = precio;
         }
+    
     }
 }
