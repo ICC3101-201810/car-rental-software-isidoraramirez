@@ -45,8 +45,11 @@
     <Compile Include="Accesorio.cs" />
     <Compile Include="Arriendo.cs" />
     <Compile Include="Cliente.cs" />
-    <Compile Include="Clientes\Otro_cliente.cs" />
+    <Compile Include="Clientes\Empresa.cs" />
+    <Compile Include="Clientes\Institucion.cs" />
+    <Compile Include="Clientes\Organizacion.cs" />
     <Compile Include="Clientes\Persona.cs" />
+    <Compile Include="IArrendar.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sucursal.cs" />

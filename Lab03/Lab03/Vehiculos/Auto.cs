@@ -19,6 +19,10 @@ namespace Lab03.Vehiculos
             this.stock = stock;
 
         }
+        public override bool puede_arrendar()
+        {
+
+        }
 
     }
 }

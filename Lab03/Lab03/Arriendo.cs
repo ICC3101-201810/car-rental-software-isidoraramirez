@@ -12,7 +12,7 @@ namespace Lab03
         DateTime Datei;
         DateTime Datef;
         Vehiculo vehiculo;
-        List<Accesorio> accesorio;
+        public List<Accesorio> accesorio;
         public int costo;
         Sucursal sucursal;
 

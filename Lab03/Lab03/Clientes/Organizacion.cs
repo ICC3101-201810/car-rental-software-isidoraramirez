@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace Lab03.Clientes
 {
-    public class Persona: Cliente
+    class Organizacion : Cliente
     {
-        
-        public Persona(string rut, string nombre)
-            : base(nombre, rut)
+        public Organizacion(string nombre, string rut) : base(nombre, rut)
         {
             this.nombre = nombre;
             this.rut = rut;
