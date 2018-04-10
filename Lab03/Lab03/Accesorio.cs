@@ -10,10 +10,12 @@ namespace Lab03
     {
         public string nombre;
         public int precio;
-        public Accesorio(string nombre, int precio)
+        public int stock;
+        public Accesorio(string nombre, int precio, int stock)
         {
             this.nombre = nombre;
             this.precio = precio;
+            this.stock = stock;
         }
     }
 }

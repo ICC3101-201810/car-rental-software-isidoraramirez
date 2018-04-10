@@ -8,14 +8,17 @@ namespace Lab03.Vehiculos
 {
     class Moto : Vehiculo
     {
-        public Moto(string marca, string patente, string modelo, string licencia, int precio)
-            : base(marca, patente, modelo, licencia, precio)
+        public Moto(string marca, string patente, string modelo, string licencia, int precio, int stock)
+            : base(marca, patente, modelo, licencia, precio, stock)
         {
             this.patente = patente;
             this.marca = marca;
             this.modelo = modelo;
             this.licencia = licencia;
             this.precio = precio;
+            this.stock = stock;
+
         }
+
     }
 }

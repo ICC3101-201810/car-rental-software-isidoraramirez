@@ -13,13 +13,15 @@ namespace Lab03
         public string modelo;
         public string licencia;
         public int precio;
-        public Vehiculo(string patente, string marca, string modelo, string licencia, int precio)
+        public int stock;
+        public Vehiculo(string patente, string marca, string modelo, string licencia, int precio, int stock)
         {
             this.patente = patente;
             this.marca = marca;
             this.modelo = modelo;
             this.licencia = licencia;
             this.precio = precio;
+            this.stock = stock;
         }
     }
 }
