@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab03
 {
-    public abstract class Vehiculo
+    public class Vehiculo
     {
         public string patente;
         public string marca;
@@ -23,7 +23,5 @@ namespace Lab03
             this.precio = precio;
             this.stock = stock;
         }
-
-        public abstract bool puede_arrendar();
     }
 }

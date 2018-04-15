@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lab03.Clientes
+namespace Lab03
 {
     public class Persona: Cliente
     {
@@ -14,6 +14,17 @@ namespace Lab03.Clientes
         {
             this.nombre = nombre;
             this.rut = rut;
+            List<string> licencias = new List<string>();
         }
+        public override bool Puede_arrendar(Vehiculo vehiculo)
+        {
+            if((vehiculo.GetType()).ToString() == "Bus")
+            {
+                return false;
+            }
+            return true;
+        }
+
     }
+
 }

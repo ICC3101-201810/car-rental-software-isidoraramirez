@@ -26,17 +26,6 @@ namespace Lab03
             accesorio = new List<Accesorio>();
             this.costo = costo;
         }
-        /*
-        public void Arrendar(Cliente cliente, DateTime Datei, DateTime Datef, Vehiculo vehiculo, Sucursal sucursal, Accesorio accesorio_extra)
-        {
-            Arriendo Arrendado = new Arriendo(cliente, Datei, Datef, vehiculo, sucursal);
-            accesorio.Add(accesorio_extra);
-            accesorio_extra.stock -- ;
-            sucursal(vehiculos)
-        }
-        public void Arrendar(Cliente cliente, DateTime Datei, DateTime Datef, Vehiculo vehiculo, Sucursal sucursal)
-        {
-            Arriendo Arrendado = new Arriendo(cliente, Datei, Datef, vehiculo, sucursal);
-        }*/
+      
     }
 }
