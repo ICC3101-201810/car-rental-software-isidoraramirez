@@ -27,4 +27,6 @@ namespace Lab03
             int stock = sto;
             int precio = ran;
         }
+    }
 }
+

@@ -35,15 +35,19 @@ namespace Lab03
                 if (municipalidad < 0.63)
                 {
                     this.permiso = true;
+                    Console.ForegroundColor = ConsoleColor.Blue;
                     Console.WriteLine("El permiso fue otorgado\n");
                     Console.Beep();
+                    Console.ResetColor();
                 }
                 else
                 {
                     this.permiso = false;
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("No se le otorgo el permiso\n");
-                    Console.Clear();
+                    Console.ResetColor();
+                    Console.Beep();
+                    Console.Beep();
                 }
             }
             else if ((permiso == false) && (vehiculo.GetType()).ToString() == "Bus")
@@ -51,19 +55,26 @@ namespace Lab03
                 if (municipalidad <= 0.8)
                 {
                     this.permiso = true;
+                    Console.ForegroundColor = ConsoleColor.Blue;
                     Console.WriteLine("El permiso fue otorgado\n");
                     Console.Beep();
+                    Console.ResetColor();
                 }
                 else
                 {
                     this.permiso = false;
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("No se le otorgo el permiso\n");
-                    Console.Clear();
+                    Console.ResetColor();
+                    Console.Beep();
+                    Console.Beep();
+
                 }
             }
             else { Console.WriteLine("Ya se tiene el permiso\n");
                    Console.Beep();
+                Console.Beep();
+                Console.ResetColor();
             }
         }
     }

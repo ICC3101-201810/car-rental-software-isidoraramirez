@@ -53,8 +53,10 @@ namespace Lab03
                 if (municipalidad <= 0.35)
                 {
                     this.permiso = true;
+                    Console.ForegroundColor = ConsoleColor.Blue;
                     Console.WriteLine("El permiso fue otorgado\n");
                     Console.Beep();
+                    Console.ResetColor();
                 }
                 else
                 {
@@ -62,6 +64,8 @@ namespace Lab03
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("No se le otorgo el permiso\n");
                     Console.Clear();
+                    Console.Beep();
+                    Console.Beep();
                 }
             }
             else { Console.WriteLine("Ya se tiene el permiso\n");

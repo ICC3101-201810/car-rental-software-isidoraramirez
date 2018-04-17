@@ -11,7 +11,7 @@ namespace Lab03
         static void Main(string[] args)
         {
             List<Sucursal> sucursales = new List<Sucursal>();
-            
+
             Console.WriteLine("           RENTCAR \n" +
                               "         BIENVENIDO!");
             while (true)
@@ -31,7 +31,7 @@ namespace Lab03
                     Console.Beep();
                     break;
                 }
-                
+
 
                 else if (opcion == "1")
                 {
@@ -45,7 +45,7 @@ namespace Lab03
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("Esta sucursal ya existe");
-                        Console.Clear();
+                        Console.ResetColor();
                         Console.Beep();
                         Console.Beep();
 
@@ -54,7 +54,9 @@ namespace Lab03
                     else
                     {
                         sucursales.Add(sucursal);
+                        Console.ForegroundColor = ConsoleColor.Blue;
                         Console.WriteLine("Sucursal añadida con exito!");
+                        Console.ResetColor();
                         Console.Beep();
                         Console.WriteLine("Desea ingresar los vehiculos disponibles?(si/no) \n");
                         string i_v = Console.ReadLine();
@@ -76,17 +78,19 @@ namespace Lab03
                                 string modelo = Console.ReadLine();
                                 Acuatico vehi = new Acuatico(patente, marca, modelo, licencia);
                                 sucursales[largo].vehiculos.Add(vehi);
+                                Console.ForegroundColor = ConsoleColor.Blue;
                                 Console.WriteLine("El vehiculo " + tipo + "ha sido agregado con exito!");
                                 Console.Beep();
                                 Console.Beep();
                             }
                             else if (tipo == "Bus")
                             {
-                                                               
+
                                 Console.WriteLine("Ingrese el tipo de Bus:\nlujo\n normal \n liviano");
                                 string modelo = Console.ReadLine();
                                 Bus vehi = new Bus(patente, marca, modelo, licencia);
                                 sucursales[largo].vehiculos.Add(vehi);
+                                Console.ForegroundColor = ConsoleColor.Blue;
                                 Console.WriteLine("El vehiculo " + tipo + "ha sido agregado con exito!");
                                 Console.Beep();
                                 Console.Beep();
@@ -97,6 +101,7 @@ namespace Lab03
                                 string modelo = Console.ReadLine();
                                 Camion vehi = new Camion(patente, marca, modelo, licencia);
                                 sucursales[largo].vehiculos.Add(vehi);
+                                Console.ForegroundColor = ConsoleColor.Blue;
                                 Console.WriteLine("El vehiculo " + tipo + "ha sido agregado con exito!");
                                 Console.Beep();
                                 Console.Beep();
@@ -107,6 +112,7 @@ namespace Lab03
                                 string modelo = Console.ReadLine();
                                 M_pesada vehi = new M_pesada(patente, marca, modelo, licencia);
                                 sucursales[largo].vehiculos.Add(vehi);
+                                Console.ForegroundColor = ConsoleColor.Blue;
                                 Console.WriteLine("El vehiculo " + tipo + "ha sido agregado con exito!");
                                 Console.Beep();
                                 Console.Beep();
@@ -117,6 +123,7 @@ namespace Lab03
                                 string modelo = Console.ReadLine();
                                 Moto vehi = new Moto(patente, marca, modelo, licencia);
                                 sucursales[largo].vehiculos.Add(vehi);
+                                Console.ForegroundColor = ConsoleColor.Blue;
                                 Console.WriteLine("El vehiculo " + tipo + "ha sido agregado con exito!");
                                 Console.Beep();
                                 Console.Beep();
@@ -127,13 +134,15 @@ namespace Lab03
                                 string modelo = Console.ReadLine();
                                 Auto vehi = new Auto(patente, marca, modelo, licencia);
                                 sucursales[largo].vehiculos.Add(vehi);
+                                Console.ForegroundColor = ConsoleColor.Blue;
                                 Console.WriteLine("El vehiculo " + tipo + "ha sido agregado con exito!");
                                 Console.Beep();
                                 Console.Beep();
                             }
+                            Console.ResetColor();
                             Console.WriteLine("Desea agregar otro vehiculo? (si/no)");
                             i_v = Console.ReadLine();
-                            if(i_v.ToLower() == "si")
+                            if (i_v.ToLower() == "si")
                             {
                                 continue;
                             }
@@ -143,14 +152,14 @@ namespace Lab03
                             }
                         }
                         goto INICIO;
-                    }                    
+                    }
                 }
                 else if (opcion == "2")
                 {
                     int i = 1;
-                    foreach( Sucursal sucursal1 in sucursales)
+                    foreach (Sucursal sucursal1 in sucursales)
                     {
-                        Console.WriteLine(i +"."+ sucursal1.nombre);
+                        Console.WriteLine(i + "." + sucursal1.nombre);
                     }
                     Console.WriteLine("Ingrese la opcion de la Sucursal que desea aregar el vehiculo: ");
                     int opcion_i = Convert.ToInt32(Console.ReadLine()) - 1;
@@ -163,12 +172,116 @@ namespace Lab03
                     string marca = Console.ReadLine();
                     Console.WriteLine("Ingrerse el tipo de licencia para poder conducir este vehiculo: ");
                     string licencia = Console.ReadLine();
-                    int largo = sucursales.Count() - 1;
-                    
+                    if (tipo == "Acuatico")
+                    {
+                        Console.WriteLine("Ingrerse el modelo: ");
+                        string modelo = Console.ReadLine();
+                        Acuatico vehi = new Acuatico(patente, marca, modelo, licencia);
+                        if (sucursal.v_arrendados.Contains(vehi))
+                        {
+                            Console.ForegroundColor = ConsoleColor.Blue;
+                            vehi.stock++;
+                            Console.WriteLine("El vehiculo " + tipo + "ha sido devuelto con exito!");
+                            Console.Beep();
+                            Console.Beep();
+                        }
 
+                    }
+                    else if (tipo == "Bus")
+                    {
 
+                        Console.WriteLine("Ingrese el tipo de Bus:\nlujo\n normal \n liviano");
+                        string modelo = Console.ReadLine();
+                        Bus vehi = new Bus(patente, marca, modelo, licencia);
+                        if (sucursal.v_arrendados.Contains(vehi))
+                        {
+                            Console.ForegroundColor = ConsoleColor.Blue;
+                            vehi.stock++;
+                            Console.WriteLine("El vehiculo " + tipo + "ha sido devuelto con exito!");
+                            Console.Beep();
+                            Console.Beep();
+                        }
+                    }
+                    else if (tipo == "Camion")
+                    {
+                        Console.WriteLine("Ingrerse el modelo: ");
+                        string modelo = Console.ReadLine();
+                        Camion vehi = new Camion(patente, marca, modelo, licencia);
+                        if (sucursal.v_arrendados.Contains(vehi))
+                        {
+                            Console.ForegroundColor = ConsoleColor.Blue;
+                            vehi.stock++;
+                            Console.WriteLine("El vehiculo " + tipo + "ha sido devuelto con exito!");
+                            Console.Beep();
+                            Console.Beep();
+                        }
+                    }
+                    else if (tipo == "M_pesada")
+                    {
+                        Console.WriteLine("Ingrerse el modelo: ");
+                        string modelo = Console.ReadLine();
+                        M_pesada vehi = new M_pesada(patente, marca, modelo, licencia);
+                        if (sucursal.v_arrendados.Contains(vehi))
+                        {
+                            Console.ForegroundColor = ConsoleColor.Blue;
+                            vehi.stock++;
+                            Console.WriteLine("El vehiculo " + tipo + "ha sido devuelto con exito!");
+                            Console.Beep();
+                            Console.Beep();
+                        }
+                    }
+                    else if (tipo == "Moto")
+                    {
+                        Console.WriteLine("Ingrerse el modelo: ");
+                        string modelo = Console.ReadLine();
+                        Moto vehi = new Moto(patente, marca, modelo, licencia);
+                        if (sucursal.v_arrendados.Contains(vehi))
+                        {
+                            Console.ForegroundColor = ConsoleColor.Blue;
+                            vehi.stock++;
+                            Console.WriteLine("El vehiculo " + tipo + "ha sido devuelto con exito!");
+                            Console.Beep();
+                            Console.Beep();
+                        }
+                    }
+                    else if (tipo == "Auto")
+                    {
+                        Console.WriteLine("Ingrerse el modelo: ");
+                        string modelo = Console.ReadLine();
+                        Auto vehi = new Auto(patente, marca, modelo, licencia);
+                        if (sucursal.v_arrendados.Contains(vehi))
+                        {
+                            Console.ForegroundColor = ConsoleColor.Blue;
+                            vehi.stock++;
+                            Console.WriteLine("El vehiculo " + tipo + "ha sido devuelto con exito!");
+                            Console.Beep();
+                            Console.Beep();
+                        }
+
+                    }
+                    Console.ResetColor();
                 }
+
+
+
+
+                else if (opcion == "4")
+                {
+                    int j = 1;
+                    foreach (Sucursal sucursal1 in sucursales)
+                    {
+                        Console.WriteLine(j + "." + sucursal1.nombre);
+                    }
+                    Console.WriteLine("Ingrese la opcion de la Sucursal que desea arrendar el vehiculo: ");
+                    int opcion_j = Convert.ToInt32(Console.ReadLine()) - 1;
+                    Sucursal sucursal = sucursales[opcion_j];
+                }
+                
             }
         }
-    }
+    } 
 }
+
+        
+    
+
