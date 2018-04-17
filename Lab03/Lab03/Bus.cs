@@ -8,15 +8,19 @@ namespace Lab03
 {
     public class Bus : Vehiculo
     {
-        public Bus(string marca, string patente, string modelo, string licencia, int precio, int stock, string tipo)
-            : base(marca, patente, modelo, licencia, precio, stock)
+        public Bus(string marca, string patente, string modelo, string licencia)
+            : base(marca, patente, modelo, licencia)
         {
             this.patente = patente;
             this.marca = marca;
-            this.modelo = modelo; //AQUI NOS REFERIMOS SI ES DE LUJO, NORMAL O LIVIANO.
+            this.modelo = modelo;
             this.licencia = licencia;
-            this.precio = precio;
-            this.stock = stock;
+            Random rndm = new Random();
+            int ran = rndm.Next(1000, 9000);
+            Random randm = new Random();
+            int sto = rndm.Next(1, 10);
+            int stock = sto;
+            int precio = ran;            
 
         }
     }

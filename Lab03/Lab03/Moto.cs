@@ -4,25 +4,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lab03.Vehiculos
+namespace Lab03
 {
     class Moto : Vehiculo
     {
-        public Moto(string marca, string patente, string modelo, string licencia, int precio, int stock)
-            : base(marca, patente, modelo, licencia, precio, stock)
+        public Moto(string marca, string patente, string modelo, string licencia)
+            : base(marca, patente, modelo, licencia)
         {
             this.patente = patente;
             this.marca = marca;
             this.modelo = modelo;
             this.licencia = licencia;
-            this.precio = precio;
-            this.stock = stock;
+            Random rndm = new Random();
+            int ran = rndm.Next(1000, 9000);
+            Random randm = new Random();
+            int sto = rndm.Next(1, 10);
+            int stock = sto;
+            int precio = ran;
+
 
         }
-        public override bool puede_arrendar()
-        {
 
-        }
 
     }
 }

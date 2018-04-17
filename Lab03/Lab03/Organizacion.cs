@@ -54,14 +54,19 @@ namespace Lab03
                 {
                     this.permiso = true;
                     Console.WriteLine("El permiso fue otorgado\n");
+                    Console.Beep();
                 }
                 else
                 {
                     this.permiso = false;
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("No se le otorgo el permiso\n");
+                    Console.Clear();
                 }
             }
-            else { Console.WriteLine("Ya se tiene el permiso\n"); }
+            else { Console.WriteLine("Ya se tiene el permiso\n");
+                Console.Beep();
+            }
         }
     }
 }

@@ -14,14 +14,17 @@ namespace Lab03
         public string licencia;
         public int precio;
         public int stock;
-        public Vehiculo(string patente, string marca, string modelo, string licencia, int precio, int stock)
+        public Vehiculo(string patente, string marca, string modelo, string licencia)
         {
             this.patente = patente;
             this.marca = marca;
             this.modelo = modelo;
             this.licencia = licencia;
-            this.precio = precio;
-            this.stock = stock;
+            Random rndm = new Random();
+            int ran = rndm.Next(1000, 9000);
+            Random randm = new Random();
+            int sto = rndm.Next(1, 10);
+            int stock = sto;
+            int precio = ran;
         }
-    }
 }

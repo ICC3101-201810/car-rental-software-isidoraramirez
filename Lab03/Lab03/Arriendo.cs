@@ -23,7 +23,7 @@ namespace Lab03
             this.Datef = Datef;
             this.vehiculo = vehiculo;
             this.sucursal = sucursal;
-            accesorio = new List<Accesorio>();
+            this.accesorio = new List<Accesorio>();
             this.costo = costo;
         }
       
